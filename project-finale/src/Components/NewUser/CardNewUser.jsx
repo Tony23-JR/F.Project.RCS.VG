@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Card } from 'react-bootstrap';
 
 const CardNewUser = ({ persona }) => {
@@ -14,8 +14,7 @@ const CardNewUser = ({ persona }) => {
                         <Card.Title className="text-center colores">Card de {persona.nombre}</Card.Title>
                         {<ul>
                             <li>Nombre: {persona["nombre"]}</li>
-                            <li>Ocupacion: {persona["ocupacion"]}</li>
-                            <li>Edad: {persona.edad}</li>
+                            <li>Usuario: {persona["usuario"]}</li>
                             <li>DNI: {persona.dni}</li>
                         </ul>}
                     </Card.Body>

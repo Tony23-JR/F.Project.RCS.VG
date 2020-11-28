@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 
 const FormNewUser = ({ setPersona, persona, personas, setPersonas }) => {
@@ -31,9 +31,10 @@ const FormNewUser = ({ setPersona, persona, personas, setPersonas }) => {
 
     function FormCompleto() {
         if (persona.nombre !== ''
-            && persona.ocupacion !== ''
-            && persona.edad !== ''
-            && persona.dni !== '') {
+            && persona.usuario !== ''
+            && persona.dni !== ''
+            && persona.clave !== ''
+            && persona.repetirClave !== '') {
             return true;
         }
         else {
@@ -54,29 +55,35 @@ const FormNewUser = ({ setPersona, persona, personas, setPersonas }) => {
 
     return (
         <>
-            <Form onSubmit={handleSubmit} name="formulario">
+            <Form onSubmit={handleSubmit} name="formNewUser">
                 <Form.Group controlId="nombre">
                     <Form.Label>Nombre</Form.Label>
                     <Form.Control type="text" placeholder="Nombre" onChange={handleChange}
                         name="nombre"
                         value={persona.nombre} />
                 </Form.Group>
-                <Form.Group controlId="ocupacion">
-                    <Form.Label>ocupacion</Form.Label>
-                    <Form.Control type="text" placeholder="ocupacion" onChange={handleChange} name="ocupacion"
-                        value={persona.ocupacion} />
-                </Form.Group>
-                <Form.Group controlId="edad">
-                    <Form.Label>edad</Form.Label>
-                    <Form.Control type="text" placeholder="edad" onChange={handleChange}
-                        name="edad"
-                        value={persona.edad} />
+                <Form.Group controlId="usuario">
+                    <Form.Label>usuario</Form.Label>
+                    <Form.Control type="text" placeholder="usuario" onChange={handleChange} name="usuario"
+                        value={persona.usuario} />
                 </Form.Group>
                 <Form.Group controlId="dni">
                     <Form.Label>dni</Form.Label>
-                    <Form.Control type="text" placeholder="dni" onChange={handleChange}
+                    <Form.Control type="number" placeholder="dni" onChange={handleChange}
                         name="dni"
                         value={persona.dni} />
+                </Form.Group>
+                <Form.Group controlId="clave">
+                    <Form.Label>clave</Form.Label>
+                    <Form.Control type="text" placeholder="clave" onChange={handleChange}
+                        name="clave"
+                        value={persona.clave} />
+                </Form.Group>
+                <Form.Group controlId="repetirClave">
+                    <Form.Label>Repetir Clave</Form.Label>
+                    <Form.Control type="text" placeholder="Repetir Clave" onChange={handleChange}
+                        name="repetirclave"
+                        value={persona.repetirClave} />
                 </Form.Group>
                 <Button className="w-100" variant="warning" type="submit">
                     Enviar
