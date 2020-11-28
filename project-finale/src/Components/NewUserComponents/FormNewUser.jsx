@@ -21,8 +21,12 @@ const FormNewUser = ({ setPersona, persona, personas, setPersonas }) => {
         } else {
             alert('El formulario tiene que estar completo')
         }
-        console.log("formulario completo", FormCompleto())
+        PasswordDIferent()
+        if (PasswordDIferent()){
+            alert('El password no es igual')
+        }
         // dniRepetido()   
+
     }
 
     // function FormValido(){
@@ -35,6 +39,15 @@ const FormNewUser = ({ setPersona, persona, personas, setPersonas }) => {
             && persona.dni !== ''
             && persona.clave !== ''
             && persona.repetirClave !== '') {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    function PasswordDIferent() {
+        if (persona.nombre.value === persona.repetirClave.value) {
             return true;
         }
         else {
@@ -75,14 +88,14 @@ const FormNewUser = ({ setPersona, persona, personas, setPersonas }) => {
                 </Form.Group>
                 <Form.Group controlId="clave">
                     <Form.Label>clave</Form.Label>
-                    <Form.Control type="text" placeholder="clave" onChange={handleChange}
+                    <Form.Control type="number" placeholder="clave" onChange={handleChange}
                         name="clave"
                         value={persona.clave} />
                 </Form.Group>
                 <Form.Group controlId="repetirClave">
                     <Form.Label>Repetir Clave</Form.Label>
-                    <Form.Control type="text" placeholder="Repetir Clave" onChange={handleChange}
-                        name="repetirclave"
+                    <Form.Control type="number" placeholder="Repetir Clave" onChange={handleChange}
+                        name="repetirClave"
                         value={persona.repetirClave} />
                 </Form.Group>
                 <Button className="w-100" variant="warning" type="submit">

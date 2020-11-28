@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import NewUser from './Components/NewUser/NewUser';
+import NewUser from './Components/NewUserComponents/NewUser';
 import Inicio from './Components/Inicio';
 import Nosotros from './Components/Nosotros';
 import ButtonGroup from "react-bootstrap/ButtonGroup";

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import FormNewUser from './Components/NewUser/FormNewUser';
-import CardNewUser from './Components/NewUser/CardNewUser';
+import FormNewUser from './FormNewUser';
+import CardNewUser from './CardNewUser';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -17,7 +17,7 @@ function NewUser() {
   return (
     <>
       <Container>
-        <h3 className="text-primary">Hola Card</h3>
+        <h3 className="text-primary">Hola New User!</h3>
         <Row>
           <Col className="mb-4" xs={12}>
             <FormNewUser
@@ -28,9 +28,12 @@ function NewUser() {
             />
           </Col>
           <Col>
-
             <div className="d-flex flex-wrap">
-              <CardNewUser />
+              {personas.map((item) => {
+                return (
+                  <CardNewUser key={item.dni} persona={item} />
+                )
+              })}
             </div>
 
           </Col>
