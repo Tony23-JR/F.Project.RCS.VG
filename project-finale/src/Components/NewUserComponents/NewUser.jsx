@@ -7,11 +7,13 @@ import 'bootstrap/dist/css/bootstrap.css'
 function NewUser() {
   const [personas, setPersonas] = useState([])
   const [persona, setPersona] = useState({
-    nombre: "",
-    usuario: "",
+    firstName: "",
+    user: "",
     dni: "",
-    clave: "",
-    repetirClave: ""
+    edad:"",
+    email:"",
+    password: "",
+    validatePassword: ""
   })
 
   return (
