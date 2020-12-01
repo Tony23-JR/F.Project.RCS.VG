@@ -3,13 +3,13 @@ import FormNewUser from './FormNewUser';
 import CardNewUser from './CardNewUser';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css'
-import './MainStyle.css'
+import './StyleNewUser.css'
 
 function NewUser() {
-  const [personas, setPersonas] = useState([])
-  const [persona, setPersona] = useState({
+  const [users, setUsers] = useState([])
+  const [user, setUser] = useState({
     userName: "",
-    user: "",
+    newUser: "",
     dni: "",
     age:"",
     email:"",
@@ -20,22 +20,22 @@ function NewUser() {
   return (
     <>
       <Container>
-        <h2 className="text-primary">Hola Nuevo Usuario!!</h2>
-        <h4 className="text-primary">Complete todos los datos para que lo registremos</h4>
+        <h2>Hola Nuevo Usuario!!</h2>
+        <h4>Complete todos los datos para que lo registremos</h4>
         <Row>
           <Col className="mb-4" xs={12}>
             <FormNewUser
-              setPersona={setPersona}
-              persona={persona}
-              personas={personas}
-              setPersonas={setPersonas}
+              setUser={setUser}
+              user={user}
+              users={users}
+              setUsers={setUsers}
             />
           </Col>
           <Col>
             <div className="d-flex flex-wrap">
-              {personas.map((item) => {
+              {users.map((item) => {
                 return (
-                  <CardNewUser key={item.dni} persona={item} />
+                  <CardNewUser key={item.dni} user={item} />
                 )
               })}
             </div>

@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-const FormNewUser = ({ setPersona, persona, personas, setPersonas }) => {
+const FormNewUser = ({ setUser, user, users, setUsers }) => {
     const { register, handleSubmit, errors, getValues } = useForm({ mode: 'onBlur' });
 
     const onSubmit = (data, event) => {
         console.log(data)
         event.target.reset();
-        setPersonas([...personas, persona])
-        setPersona({
-            ...persona,
+        setUsers([...users, user])
+        setUser({
+            ...user,
         })
     }
     return (
@@ -32,13 +32,13 @@ const FormNewUser = ({ setPersona, persona, personas, setPersonas }) => {
                 <input
                     placeholder="TheBest"
                     className="form-control mb-2"
-                    name="user"
+                    name="newUser"
                     ref={register({
                         required: { value: true, message: 'Piense un buen nombre de usuario' },
                     })}
                 />
                 <span className="text-danger text-small d-block mb-2">
-                    {errors?.user?.message}
+                    {errors?.newUser?.message}
                 </span>
                 <b>DNI</b>
                 <input
