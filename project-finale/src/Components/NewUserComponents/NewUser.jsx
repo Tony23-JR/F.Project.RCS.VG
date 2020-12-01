@@ -3,14 +3,15 @@ import FormNewUser from './FormNewUser';
 import CardNewUser from './CardNewUser';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css'
+import './MainStyle.css'
 
 function NewUser() {
   const [personas, setPersonas] = useState([])
   const [persona, setPersona] = useState({
-    firstName: "",
+    userName: "",
     user: "",
     dni: "",
-    edad:"",
+    age:"",
     email:"",
     password: "",
     validatePassword: ""
@@ -19,7 +20,8 @@ function NewUser() {
   return (
     <>
       <Container>
-        <h3 className="text-primary">Hola New User!</h3>
+        <h2 className="text-primary">Hola Nuevo Usuario!!</h2>
+        <h4 className="text-primary">Complete todos los datos para que lo registremos</h4>
         <Row>
           <Col className="mb-4" xs={12}>
             <FormNewUser

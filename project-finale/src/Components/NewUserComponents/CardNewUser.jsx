@@ -6,14 +6,13 @@ const CardNewUser = ({ persona }) => {
         <React.Fragment>
             
                 <Card border="warning" style={{ width: '18rem', margin:'5px' }}>
-                    <Card.Img variant="top" src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-11-avatar-2754576_120520.png"/>
+                    <Card.Img variant="top" src="https://img1.freepng.es/20180403/hde/kisspng-player-s-handbook-dungeons-dragons-tiefling-demo-planescape-torment-5ac40db2a808e1.1200443715227980026883.jpg"/>
                     <Card.Body>
-                        <Card.Title className="text-center">Card de {persona.user}</Card.Title>
+                        <Card.Title className="text-center">Welcam {persona.user}!!</Card.Title>
                         <ul>
-                            <li>Nombre: {persona["firstName"]}</li>
-                            <li>Usuario: {persona["user"]}</li>
-                            <li>DNI: {persona.dni}</li>
-                        </ul>
+                           Nombre: {persona["userName"]}
+                           Usuario: {persona["user"]}
+                           </ul>
                     </Card.Body>
                 </Card>
             

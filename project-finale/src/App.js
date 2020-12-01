@@ -16,13 +16,13 @@ function App() {
         <div className="App">
           <ButtonGroup arial-label="Basic example">
             <Link to="/">
-              <Button variant="secondary">Inicio</Button>
+              <Button variant="danger">Inicio</Button>
             </Link>
             <Link to="/nosotros">
-              <Button variant="secondary">Nosotros</Button>
+              <Button variant="danger">Nosotros</Button>
             </Link>
             <Link to="/newuser">
-              <Button variant="secondary">Nuevo Usuario</Button>
+              <Button variant="danger">Nuevo Usuario</Button>
             </Link>
           </ButtonGroup>
         </div>
